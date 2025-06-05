@@ -1,0 +1,121 @@
+/* General layout and background (全画面共通の背景・基本レイアウト) */
+body {
+  background: #222;
+  color: #f4f4f4;
+  font-family: system-ui, sans-serif;
+  margin: 20px;
+  min-width: 320px;
+  min-height: 400px;
+}
+
+/* Memo input area (ポップアップなどの入力欄) */
+textarea, input[type="text"] {
+  width: 100%;
+  margin: 6px 0;
+  padding: 6px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1em;
+  background: #333;
+  color: #f4f4f4;
+}
+
+button {
+  background: #d33;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  margin: 4px 2px 10px 0;
+  cursor: pointer;
+  font-size: 1em;
+  box-shadow: 1px 1px 2px #0008;
+  transition: background 0.15s;
+}
+button:hover {
+  background: #e55;
+}
+
+ul { list-style: none; padding: 0; }
+#memo-list li {
+  background: #333;
+  border-left: 4px solid #d33;
+  margin-bottom: 6px;
+  padding: 6px;
+  border-radius: 4px;
+  font-size: 0.95em;
+}
+
+/* All memos in list.html (全件表示画面のメモ) */
+#all-memos .memo {
+  background: #2a2a2a;
+  border-left: 4px solid #d33;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 6px;
+  position: relative;
+}
+.delete-btn {
+  background: #444;
+  color: #fff;
+  border-radius: 3px;
+  border: none;
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  font-size: 1.2em;
+  cursor: pointer;
+  padding: 1px 8px 1px 8px;
+  opacity: 0.8;
+  transition: background 0.15s;
+}
+.delete-btn:hover { background: #e55; }
+
+/* URL links in all-memos: easy to see on dark background
+   (全件表示画面内のURLリンク: 黒背景で見やすくする) */
+#all-memos .memo a,
+#all-memos .memo a:visited {
+  color: #50cfff;
+  text-decoration: underline;
+  word-break: break-all;    /* Long URLs wrap (長いURLの折返し) */
+  transition: color 0.15s;
+}
+#all-memos .memo a:hover,
+#all-memos .memo a:active,
+#all-memos .memo a:focus {
+  color: #fff176;
+  background: #313b42;
+}
+
+/* Progress chart area (進捗グラフ画面のwrap・canvas) */
+#progress-wrap {
+  margin-top: 18px;
+  border-radius: 8px;
+  background: #181818;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#progress-canvas {
+  background: #181818;
+  border-radius: 8px;
+  margin-top: 8px;
+  box-shadow: 1px 2px 8px #000a;
+  display: block;
+}
+label, select {
+  font-size: 1em;
+}
+#save-img {
+  margin: 8px 0 0 0;
+  padding: 8px 20px;
+  background: #d33;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+  cursor: pointer;
+  box-shadow: 1px 1px 2px #0008;
+}
+#save-img:hover { background: #e55; }

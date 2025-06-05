@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Writer Memo Paste Buddy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Main memo input UI (メインのメモ入力UI) -->
+  <textarea id="body"></textarea>
+  <input id="work" type="text">
+  <input id="title" type="text">
+  <input id="tag" type="text">
+  <input id="url" type="text">
+  <span id="err" style="color:red; font-size:0.95em;"></span>
+  <button id="save"></button>
+  <button id="show-progress"></button>
+  <div id="list">
+    <ul id="memo-list"></ul>
+    <button id="show-all"></button>
+  </div>
+  <div id="export">
+    <button id="export-json"></button>
+    <button id="export-csv"></button>
+    <button id="export-txt"></button>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
